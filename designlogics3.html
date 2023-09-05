@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEsign 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col bg-info p-5">
+                <h2>prices</h2>
+                <input type="number" value="" id="ticketprice" class="form-control">
+                <select name="" id="selecttickets" class="form-select mt-2" onchange="subtotal(event)">
+                    <option value="">--selcet your tickets here--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            <select name="" id="selectfood" class="form-select mt-2" onchange="foodPrice(event)">
+                <option value="">--select your food--</option>
+                <option value="100">puff</option>
+                <option value="200">drinks</option>
+                <option value="300">rolls</option>
+                <option value="1000">chicken</option>
+            </select>
+            <input type="checkbox" class="form-check-input" value="2" onchange="donation(event)" id="donate">Donation<br>
+            <button class="btn btn-dark mt-2" onclick="grandtotal()">calculate grandtotal</button>
+            </div>
+            <div class="col bg-primary p-5">
+                <h2>summary</h2>
+                <ul class="list-group"><li class="list-group-item">Base Price<span id="baseprice"></span></li>
+                    <li class="list-group-item">SubTotal Price<span id="subtotal"></span></li>
+                    <li class="list-group-item">Food Price<span id="foodprice"></span></li>
+                    <li class="list-group-item"> Donation<span id="donation"></span></li>
+                    <li class="list-group-item">Grand Total <span id="grandtotal"></span></li> </ul>
+                    <button class="btn btn-danger mt-2" onclick="booknowalert()">BOOK NOW</button>
+            </div>
+        </div>
+    </div>
+    <script src="designlogics3.js"></script>
+</body>
+</html>

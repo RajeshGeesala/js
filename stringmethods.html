@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <form  method="get" onsubmit="return false">
+    <input type="search" name="search" id="s" placeholder="search-here">
+    <button type="submit" onclick="stringSearch()"/> search button</button>
+    <span id="p"></span>
+    </form>
+    <script>
+          
+        
+
+        
+            var stringS = "bro movie is good" ;
+
+            // length
+            console.log(stringS.length) ;
+            console.log('string method-1')
+           // position of character in string 
+
+           console.log( stringS.charAt(6)  )  ;
+
+           // for loop for string ;
+
+           for ( i=0 ;i<stringS.length ; i++ ) 
+           { // console.log(stringS[i])  
+                 console.log(stringS[6] )}    ; 
+
+           // concat of strings ;
+
+           var stringS2 = " pk is good ,"  ;
+           console.log(stringS2)
+           var stringS3 = " kethika sharma is good ,"  ;
+            console.log(stringS3)
+           var stringS4  =  stringS.concat("                                                                                                                        "  ,stringS2 , "                                                  " ,stringS3   )
+        console.log( stringS + stringS2)
+           console.log(stringS4)  ;
+
+           // slice   
+
+          console.log(stringS.slice(13,17))
+
+
+        var movie = "bro"
+          console.log(  "movie is :" + "    " + movie)
+          //splice 
+        
+
+          //replace the strings ;
+
+          var laptops = " lg , hp , dell ,"
+
+          console.log(laptops.replace( "p" , "f"))    ;
+
+          //to upperCase ;
+          
+       var lowerCase = "This is lower case"  
+            console.log(lowerCase)
+           console.log(lowerCase.toUpperCase ())  ; ;
+           console.log(lowerCase.toLocaleLowerCase())
+     var name = "capital letters"
+          console.log(name)  ;
+          console.log(name.toUpperCase()) ;
+          
+     //trim ;
+
+          var trim = "      this is example of trim                     "
+          console.log(trim)
+          console.log(trim.trim())
+
+          //position ;
+
+          var position = "this is position" ;
+       
+          console.log( position[8])  ;
+
+        // includes ;
+        
+        var includeS = " this is example of include" ;
+        console.log(includeS) ;
+        console.log(includeS.includes("ex"))
+
+        // string search operation bu using string ;
+         
+        var Existing_data = "this course icludes html ,css , js ,"
+    function   stringSearch()
+      {
+        var searched_data = document.getElementById('s').value ;
+        if ( Existing_data.includes(searched_data)   )
+        {
+            document.getElementById('p').innerHTML = Existing_data
+        }
+        else 
+        {           document.getElementById('p').innerHTML = "NOT AVAILABE"
+      }  }
+
+     // indexof 
+       console.log(Existing_data.indexOf('html'))
+
+       //startswith 
+
+      console.log(Existing_data.startsWith('this'))
+       //ends with  
+
+
+         console.log(Existing_data.endsWith("js ,"))
+
+         //uppercase 
+
+        var uppercasE = "this lowercase will change to upper case" ;
+        console.log(uppercasE) ;
+        console.log(uppercasE.toLocaleUpperCase())
+       </script>
+
+</body>
+</html>

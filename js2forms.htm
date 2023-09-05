@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Forms</title>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+     crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div class="row">
+        <div class="col-md bg-danger"><h2>REGISTRATION FORM</h2>
+            <span id="regsucc"></span>
+            <form action="" id="registerform" onsubmit="return false" >
+            <label for="username" class="form-label" >USER NAME</label>
+         <input type="text" class="form-control" id="UserName" autocomplete="username"  >
+         <span id="no-username"></span><br>
+         <label for="mobile" class="form-label" >MOBILE NUMBER</label>
+         <input type="number" class="form-control" id="mobileNumber" >
+         <span id="no-NUMBER"></span>
+         <!-- <label for="email" class="form-label"  >Email </label>
+         <input type="email" class="form-control" id="Email" autocomplete="off" > -->
+         <span id="no-email"></span>
+         <label for="password" class="form-label" > PASSWORD </label>
+         <input type="password" class="form-control" id="Password" autocomplete="new-password" >
+         <span id="nopassword1"></span>
+         <label for="password" class="form-label" >RE-ENTER PASSWORD </label>
+         <input type="password" class="form-control" id="Password2"  autocomplete="new-password">
+         <span id="nopassword2"></span> <br>
+         <button type="submit"  onclick="register()"/ class="btn btn-success"> CLICK HERE TO REGISTER</button>
+          <button type="reset">Reset</button>
+         </form>
+        </div>
+        <div class="col-md bg-info"><h2> LOGIN FORM </h2>
+            <span id="login"></span>
+            <span id="loginun"></span>
+            <form action="" method="get" onsubmit="return false" >
+            <label for="username" class="form-label" >USER NAME</label>
+           <input type="text" id="UserNameL" class="form-control">
+           <!-- <label for="email" class="form-label" >Email </label>
+           <input type="email" class="form-control" id="Emaill" autocomplete="off" > -->
+           <label for="password" class="form-label"  > PASSWORD </label>
+         <input type="password" class="form-control" id="Password5" autocomplete="current-password" >
+           <button type="submit"   class="btn btn-success" onclick="loginf()" > CLICK HERE TO LOGIN </button>
+           <button type="reset">reset</button>
+        </div></form>
+     </div> 
+
+    <script>
+
+       const allUsers = [ ]   ;
+       function register()
+       {
+             let UserName =   document.getElementById('UserName').value ;
+             let Mobile_number =   document.getElementById('mobileNumber').value ;
+          //   let email = document.getElementById('Email').value  ;
+               let  Passwordl =  document.getElementById('Password').value ;
+              let Password2 =   document.getElementById('Password2').value  ;
+           
+                            
+            if (  UserName == '' )  
+                   {   document.getElementById('no-username').innerHTML =  "USER NAME SHOULD BE MINIMUM 6"  
+                   return false }   
+             if (Mobile_number.length < 6)  
+             {   document.getElementById('no-NUMBER').innerHTML =  "MOBILE NUMBERS SHOULD BE 10 NUMBERS !"   
+              return false  }  
+            // if  ( email == ''    )   
+            // {
+            //     document.getElementById('no-email').innerHTML =  " ENTER VALID EMAIL  ID !"      
+            //     return false   
+            // }                              
+            if (   Passwordl.length < 6)
+            {     document.getElementById('nopassword1').innerHTML =  " ENTER VALID password !"   
+               return false    }
+            if (  Password2 != Passwordl   )
+            {    document.getElementById('nopassword2').innerHTML =  "BOTH SHOULD BE SAME"   
+                  return false   }
+            if ( Mobile_number != '' && Passwordl.length >6 && UserName != '')        
+             {      var registredUser = [{ "user" : UserName ,
+                                  "Mobile_Number" : Mobile_number ,
+                                //  "email" : email ,
+                                     "Password" : Passwordl  } ]
+                   allUsers.push(registredUser) ;
+                //   console.log(registredUser) ;
+                   document.getElementById('regsucc').innerHTML = "registered success"  ;
+             }
+        
+            console.log(allUsers)
+       }
+
+
+       function loginf()
+       {
+           let loginUserNAme = document.getElementById('UserNameL').value ;
+           let LoginPassword = document.getElementById('Password5').value ;
+         //  let logEmail =  document.getElementById('Emaill').value ;
+
+           if ( loginUserNAme == '' && LoginPassword == '' )
+           {   alert('fill all the areas')  ; 
+                return false}  ;
+
+           for ( let i = 0 ; i < allUsers.length ; i++ ) 
+         
+           {  
+            if
+            ( allUsers[i].user == loginUserNAme && allUsers[i].Password == LoginPassword )  
+                    {       alert('hello')    }  
+            else {
+               window.alert('enter correct details')
+            }        
+           }
+       }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays-2</title>
+</head>
+<body>
+
+     <input type="text" id="inputname" placeholder="enter new name" value="">
+     <button type="button"  onclick="addname()">click here to add name</button>
+   <!-- <input type="text" value="" placeholder="add your new car" id="input-car"> 
+   <button type="button" onclick="addCars()" > Add your car here</button>
+
+   <input type="number" id="b1" value="" placeholder="value-1">
+   <input type="number" id="b2" value="" placeholder="value-2">
+   <button type="button" class="btn btn-primary" onclick="calculate()">calculate</button>
+   <span id="result"></span>
+   <h2 id="printdetail"></h2>
+   <span>THIS IS AGE</span>  <h3 id="getage"></h3> 
+   <button type="button" class="btn btn-danger" onclick="print()"> print age</button> -->
+</body>
+<script>
+    //  function addCars()  {
+    //   var Mycars = [ "audi" , "benz" , "ferari" , "skoda" ] ;
+    //      var newcar = document.getElementById('input-car').value ;
+    //      Mycars.push(newcar)
+    //    for ( i=0 ; i<Mycars.length ; i++)
+    //    {
+    //     console.log(Mycars[i])
+        
+    //    } }
+
+    //   var rajesh = { name : "rajesh" , surname: "geesala" , age:24} ;
+    //   var charan = { name : "charan" , surname: "gokena" ,age:22} ;
+    //   var adi = { name : "adithya ", surname : "geesala" , age : 18}  ;
+    //   console.log(rajesh ) ;
+
+    //   var userNames = [
+    //   { name : "rajesh" , surname: "geesala" , age:24} ,
+    //   { name : "charan" , surname: "gokena" ,age:22} ,
+    //   { name : "adithya ", surname : "geesala" , age : 18} ,
+    //   ]
+
+
+    //   function print() {  
+    // for ( i=0; i<userNames.length; i++){
+    //         console.log(userNames[1].age) ;
+    //       var age = userNames[0].age ;
+    //       document.getElementById('getage').innerHTML = age
+    //      if (userNames[i].age = 22)
+    //      { console.log( userNames[2].name)}
+    //      else {
+    //       console.log ('age is not 22')
+    //      }
+    //     }
+    //     }
+    //     print()
+
+    // function addname() 
+    //  { var names = [ "rajesh" ,"charan" ,"anirudh" ,"adithya" ]   ;
+    //       console.log(names)  ;
+    //     var newname = document.getElementById('inputname').value ;
+    //      names.push(newname) }
+      
+      
+    var detail = {     name :"rajesh"  ,    number : 8885444898 , age :24 }
+    
+    var details = [
+            {     name :"rajesh"  ,    number : 8885444898 , age :24 } ,
+            {     name :"adithya"  ,    number : 834161444 , age : 18 } ,
+            {     name : "geesala"   ,   number : 9247459956 ,age : 50 }
+                ]
+        for ( i=0 ; i<=details.length ;i++)
+            {      
+                 console.log(details)
+                 if ( details[i].age >=50 ) 
+                 {     console.log("age is 50")  }
+                 else {
+                  console.log("age is not 50")
+                 }
+            }
+</script>
+</html>

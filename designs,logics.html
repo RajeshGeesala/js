@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desing,logics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="designlogics.css">
+  </head>
+<body>
+    <div class="container pt-5">
+        <h2>designs logics</h2>
+        <div class="row">
+            <div class="col bg-info p-5">
+              <input type="" id="" class="form-control" id="base-input-price" placeholder="tickets price">
+              <select name="" id="tickets" class="form-select" onchange="calculateBasePrice (event)">
+                <option value="">select tickets</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <select name="" id="food-item" class="form-select">
+                <option value="">select food</option>
+                <option value="100">puff</option>
+                <option value="200">popcorn</option>
+                <option value="300">rolls</option>
+                <option value="400">chicken</option>  
+              </select>
+                <input type="checkbox" class="form-check-input" id="donation" value="2">  Donation </div>
+            <div class="col bg-primary p-5">
+              <h1>price summary</h1>
+                <ul class="list-group" ><li class="list-group-item">base price <span id="base-price">100</span></li>
+                <li class="list-group-item" id="subtotal" >subtotal <span>600</span></li>
+                <li class="list-group-item" id="food-input-price">food price <span>600</span></li>
+                <li class="list-group-item" id="donation-input" >donation <span>2</span></li>
+                 <li class="list-group-item" id="grandtotal" >grand total</li></ul>
+                 <button type="button" class="btn btn-dark mt-2">book now</button>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <script src="designs,logics.js" ></script>
+</body>
+</html>

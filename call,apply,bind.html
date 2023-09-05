@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call , Apply ,Bind</title>
+</head>
+<body>
+
+    <script >
+
+        let movie1 = {
+            name : "jailer" ,
+            hero : "rajni" ,
+        } ;
+        let movie2 = {
+            name : "bro" ,
+            hero : "pk" ,
+        }
+   let DisplayMovieName = function ( langauge) {
+           console.log(this.name + " "+ this.hero + "  " + langauge )
+
+   }  ;
+
+   DisplayMovieName.call(movie2 ,["tamil" , "telugu  "  , "hindi"] ) ;
+   DisplayMovieName.apply(movie1 ,['tamil' , 'teluggu', 'hinid'] ) ;
+
+   let storeMovies = DisplayMovieName.bind (movie1 ,['tamil' , 'teluggu', 'hinid'] ) ;
+
+    let GEtsalaries = {
+        getSalary : function (name , name2)
+            {
+                console.log(this.salary + name +name2)
+
+            }
+
+    }
+
+  let employee1 = {
+        salary: 20000
+     } ;
+ let employee2 = {
+        salary: 30000
+     } ;
+ let employee3 = {
+        salary: 40000
+     }  ;
+
+    GEtsalaries.getSalary.call(employee1 , "rajesh")    ;
+    GEtsalaries.getSalary.apply(employee2 , ["rajesh " , "ramesh" ])    ;
+
+   var bindE = GEtsalaries.getSalary.bind(employee3 , "rajesh " , "get3"  )    ;
+       bindE()
+
+
+        var a = [ 1,2,3,5,5]
+
+         a.forEach(  (val)=>{
+                val * 2 ;
+               console.log ( val * 2 )
+
+         } )  ;
+     //sort
+         var b = [ 5555,222,4 ,33,66] ;
+
+        console.log(b.sort( (x,y)=>{
+            return x-y   ;
+        }  ) )   ;
+
+
+        var arrO = [ {
+            name  : "rajesh" ,
+            salary : 38000
+        },
+       { name  : "ramesh" ,
+            salary : 42000
+        } ,
+       { name  : "ganesh" ,
+            salary : 32000
+        }
+    ]
+     console.table(arrO)
+    console.table( arrO.sort( (b,c)=>{
+         return c.salary-b.salary ;
+    }   )   ) ;
+
+
+         console.table(  arrO.sort( ) )  ;
+
+
+         // acess obj proerties  in a arry
+
+         var ACss = [ {name: "eee",
+                          age : 26},
+                         { name: "www",
+                          age : 23},
+                          {name: "www",
+                          age : 27}]  ;
+
+
+        //     console.table(ACss)   ;
+
+        //   ACss.forEach( (name)=> {
+        //    console.table( name.age  )
+        // }  )
+
+
+      console.log (ACss.sort( ( a1,a2 ) =>{
+         return (a1.age - a2.age )
+        } ) )
+
+
+       var  Af =   ACss.forEach ( (findAge)=>
+        {    return ( findAge.name  )      }  )
+    console.table(Af)
+
+    var Ag   =   ACss.map   (   (ages) => 
+        {    return  (  ages.age )    }  )
+
+      console.table(Ag)
+
+    </script>
+</body>
+</html>

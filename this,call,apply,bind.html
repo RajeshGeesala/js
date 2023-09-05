@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this call apply bind</title>
+</head>
+<body>
+   <input type="text" id="text" name="text" value="">
+
+  <button type="button" onclick="printtext()" >print text</button>
+  <span id="printtext"></span>
+
+    <button onclick="this.style.display=none" / >click here to this method</button>
+    <script>
+        let trains = {
+            name : "gowthamni" ,
+            type : "sperfast express" ,
+            color : "typical" ,
+            sleepers : true ,       
+        }  ;
+
+        let trains2 = {
+
+            name : "ratna" ,
+            type : " express" ,
+            color : "typical" ,
+            sleepers : false , 
+        }
+  let prototype = {
+    functionsget : function (  )
+    {
+        console.log(this)
+    }
+  } ;
+
+prototype.functionsget.call(trains2)  ;
+
+var myname = {
+    fname : "rajesh"  ,
+    lnanme : "geesala"
+}  ;
+
+var name2 = {
+    fname : "ramesh"  ,
+    lnanme : "meesala"
+}
+
+  var printNAmes = {
+
+    printNAmesf : function ()
+    {    console.log(this.fname  + " : is first name" + " &" + this.lnanme + " is last name")}
+  }
+
+printNAmes.printNAmesf.call(name2)  ;
+
+// arrow functions 
+   // normal function in  variable...
+const greet = function ()
+               { console.log(" hello rajesh ")  ;
+                return  1 } 
+     console.log(greet (  1 ))        
+
+ // normal function 
+
+function ramesh () {
+      console.log ('print ramesh')
+}
+
+ramesh() 
+// normal function with parameters
+
+   function normalFunction ( a,b) {
+         console.log(a*b)
+   }
+
+   normalFunction(4,6)  ;
+
+   function normalFunction2 (a)
+   {
+    console.log ( a + 800  )
+   }
+     
+   normalFunction2(5)
+
+   // arrow function with single parameter
+  let newVersion1 = a => console.log(a )
+  newVersion1(500)
+
+   //arrow function  with multiple parameters ..
+
+    AddNumber = (  a, b ) => {console.log(a+b)}
+
+   AddNumber(560,600) 
+
+   //
+
+ newVersion = () => console.log('print arrows') ;
+ newVersion ()
+
+  Arrowfunction = () =>   console.log( "rajesh" ) ;
+
+  Arrowfunction()
+
+  // this method 
+
+
+  var details  = {
+    name : "rajesh" ,
+    age : 24 ,
+    male : true  ,
+    salary : 38000 ,
+    detailsF : function ()
+                   {
+                    console.log(this.name + " : this is name ")
+                                    }
+  }
+
+
+  details.detailsF.call(details)
+  
+  // parameters 
+
+    function addition (num1,num2)
+
+
+          { console.log(num1+num2)  }
+
+  addition (  8, 0 )
+
+  // function with arrow key 
+  
+     addnumberss = (a,b) => console.log(a+b) ;
+     
+     addnumberss(70,60)   ;
+
+
+printtext = () => {
+
+ var  InputText = document.getElementById('text').value ;
+
+document.getElementById('printtext').innerHTML = InputText ;}       
+
+printNumbers = ( ) =>
+
+{    var a = 5 ; var b = 50
+     document.getElementById('printtext').innerHTML =  a  ;      }
+
+     // new call 
+  var car1 = {  name : "audi" , speed : 250 , AC : true , openTop : false   }
+ 
+  var car2 = {  name : "benz" , speed : 350 , AC : true , openTop : true }
+
+  var car3 = {  name : "ferari" , speed : 450 , AC : false , openTop : false   }
+ let carDetails = {
+
+
+   car_details : function()
+        {  console.log(this)    ;  }
+}
+     
+  carDetails.car_details.call(car1)
+
+document.getElementById('printtext').innerHTML =   carDetails.car_details.call(car1)  ;
+
+// guvuig function to a variable
+
+const user = function ()
+{
+  console.log('rajesh user')
+}
+
+user() ;
+
+// giving function to a variable with parameters
+
+var addS = function (a,b)
+{ 
+  console.log(a+b)
+}  ;
+
+addS( 7,7 )  ;
+
+
+ // giving function in the object ... *here we have to use call key word to call function in a obj **
+ 
+ 
+  var Users = {
+     userdetails : function ()
+     {
+      console.log ( "hello world ")
+     }
+  }
+
+   Users.userdetails.call()  ;
+
+  // calling function in a variable with this keyword
+   
+  var obj1 = { name : "book" , pages : "200" ,resusable : false , } ;
+
+  var obj2 = { name : "fan"  ,  pages : "3 " , resusable : false} ;
+
+  var obj3 = {    name : "chair" , pages : " 4 "  ,resusable : true }
+  var EachObj = { 
+
+    detils : function()
+    { 
+     console.log(this) 
+    } 
+
+  }
+
+EachObj.detils.call(obj1)  
+
+
+// arrow functions 
+
+rajesh = () => console.log('hello js ') ;
+rajesh ()  ;
+
+// arrow functions with parameters ,
+
+addition = (val1,val2) => console.log(val1+val2) ;
+addition(90,30)
+
+
+  
+
+
+
+
+
+
+ </script>
+</body>
+</html>

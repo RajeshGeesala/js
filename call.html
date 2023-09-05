@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call</title>
+</head>
+<body>
+   <script>
+    let bike = {
+        name : "bike1" ,
+        disc : false ,
+    }  ;
+    let bike2 = {
+        name : "bike2" ,
+        disc : true ,
+    }  ;
+    
+
+    let bikes = {
+        GetAllBikes :     function ()    {   
+             console.log(this.name)
+         }
+    }
+
+    bikes.GetAllBikes.call(bike) ;
+
+
+    let carMOdel = {
+        GEtcarModel : function () {
+            console.log(this.name)
+        }
+    } ;
+
+    let car1 = {
+        name : "carone",
+        speed : 150 
+    };
+    let car2 = {
+        name : "car2",
+        speed : 180 
+    } ;
+    let car3 = {
+        name : "car1",
+        speed : 250 
+    } ;
+
+    carMOdel.GEtcarModel.call (car1)
+
+   </script> 
+</body>
+</html>

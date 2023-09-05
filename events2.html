@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events-2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+     
+        <form >
+            <input type="number" class="form-control" placeholder="value-1" id="box1" value="">
+            <input type="number" class="form-control" placeholder="value-2" id="box2" value="">
+            <button class=" btn btn-dark ms-10" onclick="adds()"  > ADD</button>
+           result <span id="result1"> </span> 
+        </form>
+   <input type="number" id="a1" value="">
+   <input type="number" id="a2" value="" >
+   <button class="btn btn-dark" onclick="subtraction()"> subtract</button>
+   result : <span id="res"></span>
+     
+    <script>
+      //  window.alert("hello world") ;
+        console.log("rajesh");
+
+       function adds() {
+        var value1 = document.getElementById('box1').value  ;
+        var value2 = document.getElementById('box2').value ;
+        var result = Number( value1 )+ Number( value2 );
+        document.getElementById('result1').innerHTML = result ;
+       }
+   function subtraction()
+   {
+    var a = document.getElementById('a1').value ;
+    var b = document.getElementById('a2').value ;
+    var result2 = Number(a)-Number(b) ;
+     document.getElementById('res').innerHTML = result2 ;
+   }
+
+   function multiply (w,e)
+   {
+     var q = w+e ;
+     console.log(q) ;
+   }
+   multiply (5,8) ;
+   function name (a,s)
+   {
+    var d = a*s;
+    console.log(d)
+   }
+    name( 10,10)
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js- CallBack</title>
+</head>
+<body>
+    <!--settimeout-->
+
+
+    <script>
+
+        ///set time-out //
+
+
+        setTimeout ( () => {
+            console.log("hello js")
+        } , 3000  )
+
+        function Time (){
+
+          setTimeout( () => {
+           console.log("hello time function")
+          }, 5000 )
+        }  ;
+
+        Time()  ;
+
+      //
+      function SayHEloo (name)
+      { setTimeout (  () => {        console.log( `hello ${name} good mrng` ) }   ,6000   )
+
+      }
+
+  SayHEloo ( "rajesh"   )
+
+    //method  in set time out
+
+       setTimeout (   ( ) => {
+          SayHEloo (" rajesh play after 7 secs")
+       } ,7000 )
+
+       // date method
+
+   let date = new Date () ;
+   console.log(date)
+   console.log(date.toLocaleDateString())
+
+
+   // setvintervel
+
+
+   // setInterval (() =>
+              //  {  console.log("set interval") }
+              //  , 1  )
+
+    // set time out
+
+
+
+      var a = "rajesh"
+      var b = "rajesh"
+
+      //for each
+
+      let mobiles = [
+        { name : "iphone13" , price: 30000} ,
+        { name : "iphone14" , price: 40000} ,
+        { name : "iphone15" , price: 70000} ,
+        { name : "iphone16" , price: 80000} ,
+      ]
+
+
+
+      for (  i = 0 ; i<=mobiles.length ; i++  )
+      {     console.log(mobiles[2]  )  }
+      mobiles.forEach (  (mobile) =>{ console.log(mobile.price) }   )  ;
+
+
+      let rajesh = function() {
+        console.log('rajesh')
+      }
+
+      rajesh ()  ;
+
+      rajesh = ()  =>
+        console.log ("angular functions")
+ rajesh ()  ;
+
+ setTimeout  (  () => {
+    console.log('settimout')
+ } , 5000  ) ;
+
+
+ setInterval  (  ( ) => {
+    console.log("set time interval")
+ } , 1000 )  ;
+
+
+   mobiles.forEach (   (  mob) => {
+    console.log(mob.name )
+   }      )
+
+</script>
+</body>
+</html>

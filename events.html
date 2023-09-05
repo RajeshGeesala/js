@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventsjs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   <h2> js events</h2>
+    <!--event 1-->
+     <input type="number" id="1" value="">
+
+     <input type="number" id="2" value="">
+
+     <button type="button" class="btn btn-primary" onclick="event1()">result 1</button>
+        result  :  <span id="result1"> </span>
+
+      <!-- event 2-->
+
+        <input type="number" id="3" value="">
+        <input type="number" id="4" value="">
+        <button class="btn btn-dark" onclick="event2()">result</button>
+          multiply =  <span id="result2">
+
+          </span>
+       <br>
+
+
+     <!--event  3   -->
+
+     <input type="text" id="5" value="">
+
+     <input type="text" id="6" value="">
+
+     <button class="btn btn-success" onclick="event3()" >divide </button>
+     result = <span id="result3"></span> 
+
+
+     <input type="number" id="7" value="" class="form-control" placeholder="value1"> 
+     <input type="number" id="8" value="" class="form-control" placeholder="value2"> 
+      <button class="btn btn-primary" onclick="event4()" type="button" >Result</button>
+      Result : <span id="result4" ></span>
+
+      <input type="number" id="b1" value="" class="form-control" placeholder="value1"> 
+      <input type="number" id="b2" value="" class="form-control" placeholder="value2"> 
+       <button class="btn btn-primary" onclick="event5()" type="button">Result</button>
+       Result 5 = <span id="result5" ></span>
+
+
+
+    <script src="eventsjs.js">
+     </script>
+</body>
+</html>

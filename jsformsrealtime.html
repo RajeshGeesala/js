@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js forms real time</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+   crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  <style>
+
+    .bg1  {  background-color: rgb(237, 137, 126);  
+              border-radius: 5px;   } 
+    h4 {        color: rgb(26, 16, 5); 
+                  margin-top: 20px;   }
+    .bg2 {         background-color: rgb(66, 122, 104); 
+             border-radius: 5px;  }
+    .btn-success  {  background-color: rgb(2, 18, 18);      }   
+    .btn-warning {           background-color: black;
+                        color: antiquewhite;}      
+  </style>
+</head>
+<body>
+  <div class="container bgbg">
+    <div class="row">
+        <!--registration form-->
+        
+        <div class="col-md-5 mt-3 bg1">  <h4>REGISTRATION FORM </h4>
+                 <br> <br>
+            <form action="" method="get" onsubmit="return false" id="registerf">
+                <span id="logins"></span>
+            <input type="text" id="username" placeholder="username" class="form-control">
+            <br> <span id="nousername"></span>
+            <input type="email" id="loginemail" placeholder="enter your mail id" class="form-control">
+            <br> <span id="noemail"></span>
+            <input type="number" name="" id="mobilenumber" placeholder="enter mobile number" class="form-control">
+            <br> <span id="nomobilenumber"></span>
+            <input type="password" name="password1" id="password1" class="form-control" placeholder="enter your password">
+            <br>  <span id="nopassword"></span>
+            <input type="password" name="password2" id="password2" class="form-control" placeholder="re-enter your password">
+            <br> <span id="nopassword2"></span>
+            <button type="submit" class="btn btn-warning" onclick="register()">Submit here to register</button>
+            <div id="modalreg"></div>
+              <!-- <div class="modal fade"id="loginm">
+                <div class="modal-dialog"> 
+                <div class="modal-content">
+                    <div class="modal-header">REGISTER HERE   <button type="button" class="btn" data-bs-dismiss="modal">✕</button></div>
+                   
+                    <div class="modal-body"id="modalreg" ></div>
+                    </div>
+                </div>
+              </div>-->
+            </form>
+        </div> 
+        
+      <!--login form-->
+        <div class="col-md-5 mt-3 bg2"> <h4>LOGIN FORM</h4>
+              <br> <br>
+            <form action="" method="get" onsubmit="return false"  id="logf">
+            <input type="text " id="userL" class="form-control" placeholder="enter your user name">
+            <span id="nousernamel"></span><br>
+            <input type="password" id="password3" placeholder="enter your password" class="form-control">
+            <span id="nopassword3"></span><br>
+            <button type="submit" class="btn btn-success" onclick="login()" data-bs-toggle="modal" data-bs-target="#modal-loginl">LOG-IN</button>
+             <span id="loginnot"></span>
+             <div class="modal fade" id="modal-loginl" >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header"> login details
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">✕</button>
+                </div>
+               
+                <div class="modal-body" id="loginsuccess" > 
+                  <img src="https://i.stack.imgur.com/gqKFh.png " alt="login success img">  </div></div>
+              </div>
+             </div>
+        
+            </form>
+        </div>
+    </div>
+  </div>
+    <script>
+        const all_users = [];
+        function register ()
+        {
+            let user_name = document.getElementById('username').value ;
+            let mail_id = document.getElementById('loginemail').value ;
+            let password1 = document.getElementById('password1').value ;
+            let password2 = document.getElementById('password2').value ;
+            let mobilenumber = document.getElementById('mobilenumber').value ;
+
+            if (  user_name == ''  )
+            {  document.getElementById('nousername').innerHTML = "User Name Should Not Be Blank" ;
+              return false ; } 
+              else if  ( user_name.length   <=  6)
+            {     document.getElementById('nousername').innerHTML = "User NAme Should Be Minimum 6 Letters";
+               return false ;  }
+               else if ( mail_id ==''  )
+               {
+                document.getElementById('noemail').innerHTML = "Enter Valid MAil Id" ;
+                return false ;
+               }
+               else if ( mobilenumber=='' )
+               {   document.getElementById('nomobilenumber').innerHTML = "Enter Valid Mobile Number" ;
+               return false ;}
+              else if (  mobilenumber.length<5  )    
+              {   document.getElementById('nomobilenumber').innerHTML = "Mobile Number Should Be MOre Than 6"  
+              return false ; }
+
+              else if (  password1 == ''  )
+              {   document.getElementById('nopassword').innerHTML = "Password Should Not Be BLank" 
+              return false ; }
+              else if (  password1.length < 6  )
+              {   document.getElementById('nopassword').innerHTML = "Password should more than 6 letters"
+              return false ; }
+              else if (  password1 != password2  )
+                {   document.getElementById('nopassword2').innerHTML = "BOTH SHOULD BE SAME" ;
+                return false ;}  
+              else {
+                   document.getElementById('modalreg').innerHTML = "Registerd Succesfully  →" ;
+                   
+              }  ;
+
+           
+
+            // store all values in an array 
+
+            let current_user = { "username" : user_name , "password" : password1 ,    }
+             all_users.push(current_user)
+           //  console.log(all_users)
+
+             if ( user_name != ''  && password1 != '' &&  mail_id != '')
+             {    console.log(all_users)   ;
+                document.getElementById('registerf').reset () ;    }
+
+        }   
+
+
+        function login ( )
+        {
+            let loginName = document.getElementById('userL').value ;
+            let LoginPassword = document.getElementById('password3').value ;
+
+           if (    loginName == '' )
+              {   document.getElementById('nopassword3').innerHTML = "user name should not be empty" ; } 
+            else if ( LoginPassword == ''   )
+              {    document.getElementById('nopassword3').innerHTML = " password should not be empty" ;   }
+            else if ( loginName.length < 6 )
+            {   document.getElementById('nopassword3').innerHTML = " login name should minimum 6 letters " ; }  
+            else if ( LoginPassword.length < 6   ) 
+            {      document.getElementById('nopassword3').innerHTML = "password should minimum 6 characters"           }            
+                                   
+              for  (let i= 0; i < all_users.length ;  i++) 
+          {
+            if ( all_users[i].username == loginName && all_users[i].password == LoginPassword)
+               { document.getElementById('loginsuccess').innerHTML = "logged in successfully"
+                 return false ; }
+            
+            else { document.getElementById('loginnot').innerHTML = "user name password matched"  ;
+                  return false ;  }  } 
+
+
+           document.getElementById('logf').reset() ;
+           
+        }
+
+      
+    </script>
+</body>
+</html>

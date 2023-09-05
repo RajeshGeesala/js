@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS OBJECTS TASKS</title>
+</head>
+<body>
+  <script>
+
+     const employees = [
+    {
+        emp_name: 'Manohar Lotlapalli',
+        emp_age : 31,
+        emp_address : 'Hydrabad',
+        gender : 'Male',
+        designation : 'Manegar',
+        salary : 20000000,
+        doj : '2019-march',
+        laptop_assign : true,
+        emp_helth_insu : 7500000,
+        Status_of_employee : "inactive" ,
+    },
+    {
+        emp_name: 'Madhu',
+        emp_age : 38,
+        emp_address : 'Kerala',
+        gender : 'Female',
+        designation : 'GM',
+        salary : 25000000,
+        doj : '2016-july',
+        laptop_assign : true,
+        emp_helth_insu : 8500000,
+        Status_of_employee : "active"
+    },
+    {
+        emp_name: 'Prasadu Elaprolu',
+        emp_age : 28,
+        emp_address : 'Vijayawada',
+        gender : 'Male',
+        designation : 'Software Engineer',
+        salary : 1300000,
+        doj : '2018-october',
+        laptop_assign : true,
+        emp_helth_insu : 350000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Manisha',
+        emp_age : 25,
+        emp_address : 'Vizagpattanam',
+        gender : 'Female',
+        designation : 'Web develope',
+        salary : 1000000,
+        doj : '2021-april',
+        laptop_assign : true,
+        emp_helth_insu : 250000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Kavith',
+        emp_age : 35,
+        emp_address : 'Warangal',
+        gender : 'Female',
+        designation : 'Asst manager',
+        salary : 18000000,
+        doj : '2017-june',
+        laptop_assign : true,
+        emp_helth_insu : 6500000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Ashok',
+        emp_age : 24,
+        emp_address : 'Chennai',
+        gender : 'male',
+        designation : 'Project Engineer',
+        salary : 600000,
+        doj : '2022-january',
+        laptop_assign : false,
+        emp_helth_insu : 200000,
+        Status_of_employee : 'inactive'
+
+    },
+    {
+        emp_name: 'Siva',
+        emp_age : 30,
+        emp_address : 'Kadapa',
+        gender : 'male',
+        designation : 'Senior Project Engineer',
+        salary : 1400000,
+        doj : '2017-may',
+        laptop_assign : false,
+        emp_helth_insu : 500000,
+        Status_of_employee : 'inactive'
+
+    },
+    {
+        emp_name: 'Sreenu',
+        emp_age : 32,
+        emp_address : 'Nellur',
+        gender : 'male',
+        designation : 'Scrum Master',
+        salary : 1800000,
+        doj : '2015-may',
+        laptop_assign : false,
+        emp_helth_insu : 6500000,
+        Status_of_employee : 'inactive'
+
+    },
+    {
+        emp_name: 'Venkat',
+        emp_age : 29,
+        emp_address : 'Tirupathi',
+        gender : 'Male',
+        designation : 'Sr Software Engineer',
+        salary : 1400000,
+        doj : '2019-october',
+        laptop_assign : true,
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Hrithika',
+        emp_age : 25,
+        emp_address : 'Maharashtra',
+        gender : 'Female',
+        designation : 'System Engineer',
+        salary : 1000000,
+        doj : '2018-october',
+        laptop_assign : true,
+        emp_helth_insu : 450000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Anil',
+        emp_age : 23,
+        emp_address : 'Tirupathi',
+        gender : 'Male',
+        designation : 'Software Engineer',
+        salary : 400000,
+        doj : '2023-october',
+        laptop_assign : false,
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Laxmi',
+        emp_age : 30,
+        emp_address : 'Vijayawada',
+        gender : 'Male',
+        designation : 'Tech Lead',
+        salary : 1600000,
+        doj : '2017-september',
+        laptop_assign : true,
+        emp_helth_insu : 750000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Jyothi',
+        emp_age : 24,
+        emp_address : 'Bangalore',
+        gender : 'Female',
+        designation : 'HR',
+        salary : 900000,
+        doj : '2019-february',
+        laptop_assign : true,
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Vamsi',
+        emp_age : 24,
+        emp_address : 'Guntr',
+        gender : 'male',
+        designation : 'Executive',
+        salary : 400000,
+        doj : '2022-december',
+        laptop_assign : false,
+        emp_helth_insu : 200000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Ramu',
+        emp_age : 33,
+        emp_address : 'Eluru',
+        gender : 'male',
+        designation : 'PROGRAM MANAGER',
+        salary : 1900000,
+        doj : '2011-may',
+        laptop_assign : true,
+        emp_helth_insu : 800000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Thejaswini',
+        emp_age : 25,
+        emp_address : 'Guntr',
+        gender : 'Female',
+        designation : 'Senior Consultant',
+        salary : 1500000,
+        doj : '2020-june',
+        laptop_assign : true,
+        emp_helth_insu : 600000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Umesha',
+        emp_age : 27,
+        emp_address : 'Delhi',
+        gender : 'male',
+        designation : 'Technologist',
+        salary : 1400000,
+        doj : '2021-december',
+        laptop_assign : true,
+        emp_helth_insu : 500000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'shini',
+        emp_age : 25,
+        emp_address : 'Guntr',
+        gender : 'Female',
+        designation : 'Senior Administrator',
+        salary : 700000,
+        doj : '2017-may',
+        laptop_assign : true,
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Vivitha',
+        emp_age : 27,
+        emp_address : 'chennai',
+        gender : 'Female',
+        designation : 'Senior quality',
+        salary : 1200000,
+        doj : '2017-july',
+        laptop_assign : true,
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Kumar',
+        emp_age : 25,
+        emp_address : 'Hyd',
+        gender : 'male',
+        designation : 'Delivery Manager',
+        salary : 2300000,
+        doj : '2016-june',
+        laptop_assign : true,
+        emp_helth_insu : 900000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Deepu',
+        emp_age : 25,
+        emp_address : 'pune',
+        gender : 'Female',
+        designation : 'Administrator',
+        salary : 700000,
+        doj : '2019-october',
+        laptop_assign : true,
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Mohan',
+        emp_age : 25,
+        emp_address : 'Bangalore',
+        gender : 'male',
+        designation : 'Senior engineer',
+        salary : 700000,
+        doj : '2017-may',
+        laptop_assign : true,
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Rmesh',
+        emp_age : 25,
+        emp_address : 'Guntr',
+        gender : 'male',
+        designation : 'Senior Project Engineer',
+        salary : 1100000,
+        doj : '2019-september',
+        laptop_assign : true,
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Uday',
+        emp_age : 24,
+        emp_address : 'Vijayawada',
+        gender : 'male',
+        designation : 'Executive',
+        salary : 420000,
+        doj : '2022-January',
+        laptop_assign : false,
+        emp_helth_insu : 220000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Sunitha',
+        emp_age : 28,
+        emp_address : 'Pune',
+        gender : 'Female',
+        designation : 'Administrator',
+        salary : 1200000,
+        doj : '2020-augset',
+        laptop_assign : true,
+        emp_helth_insu : 500000,
+        Status_of_employee : 'Active'
+
+    }
+    
+  ];
+
+       console.log (employees) 
+      const new_emp =  [  {
+        emp_name: 'Rajesh',
+        emp_age : 24,
+        emp_address : 'Banglore',
+        gender : 'male',
+        designation : 'Devoloper',
+        salary : 1200000,
+        doj : '2023-nov',
+        laptop_assign : true,
+        emp_helth_insu : 500000,
+        Status_of_employee : 'Active'
+      }   ]
+
+    var express_trains =[  "sesadri" ,"gowtami" , "hamsafar" ,  ] ;
+    var passenger_trains = [   "rjy-kkd" , "kathipudi"  ,"annavaram"  ] ;
+    var super_fast = [ "ss" , 'fs' ,"ms"] ;
+    var all_trains = express_trains.concat(passenger_trains , super_fast) ;
+    console.log(all_trains)  ;
+     //splice = (join) add value according to position ;
+    var cars = [ "bmw" , "benz" , "audi" , "ferari"] 
+      cars.splice(1 , 0 ,"maruthi" ) ;
+      console.log(cars) ;
+      var frnds = ["sandeep" , "rajesh" , "balu" ,"prathap" ] ;
+      frnds.splice(3, 0, "gaccibowli") ;
+      console.log(frnds)
+      // pop
+
+      var bikes = [ "fz" ,"bullet" ,"rx100" ,"passion" ,"ktm" ];
+      var bikes2 = [  "fz2" , 'bullet2' , 'rx200' ,'passion2' ,'ktm2' ] ;
+      var totalbikes = bikes.concat(bikes2);
+    
+       totalbikes.splice( 0, 3, "addedbike") ;
+
+       console.log(totalbikes)  ;
+
+
+       //slice 
+       var mobile1 = [ "nokia" , "mi" , "asus" ,"iphone", "moto"] ;
+       var mobile2  = mobile1.slice(2) ;
+      console.log(mobile1) ;
+      console.log(mobile2) ;
+
+      //splice 
+
+      var mobile = [  "nokia" , "mi" , "asus" ,"iphone", "moto"] ;
+      mobile.splice(0,1, "addedmobile") ;
+      console.log(mobile) ;
+      //slice
+      var laptops  = [ "acer" ,"dell", "thinkpad" , "mac", "toshiba"] ;
+      var laptopslice = laptops.slice(3);
+      console.log(laptops) ;
+      console.log(laptopslice);
+      //shift delete 1st element in array
+      var laptop  = [ "acer" ,"dell", "thinkpad" , "mac", "toshiba"] ;
+         laptop.shift("addnewmobile1" ," addednewmobile2") ;
+         console.log(laptop) ;
+     //unshift  add 1st elemtns in array
+     var lappy = [ "acer" ,"dell", "thinkpad" , "mac", "toshiba"] ;
+        lappy.unshift("addedmoible1") ;
+        console.log(lappy) ;
+     // pop  delete last elements in the array 
+     var lappy1 = [ "acer" ,"dell", "thinkpad" , "mac", "toshiba"] ;
+        lappy1.pop() ;  
+        console.log(lappy1) ;
+     // slice
+     var fruits = [ "citrus" , "mango" , "gauva" ,"banana"];
+     var fruitslice = fruits.slice( 1);
+     console.log(fruits) ;
+     console.log(fruitslice) ;
+     //pop 
+     var fruits2 = [ "citrus" , "mango" , "gauva" ,"banana"];
+          fruits2.unshift('grapes' , "dates")
+       console.log(fruits2)
+
+       var sweets = [ "khaja" ,"bobbatu" ,"mysorepak" , "kovaa" , "rasagulla"] ;
+        var hot =   [ "bundhi" , "mixture " ,"agra mixture" , "chekkamixutre"]  ;
+          var newsweets = sweets.concat(hot) ;
+     console.log(sweets) ;
+    console.log(newsweets)  ;
+
+    var students = [ "amil" , "rajesh" , "srinu" ,"priyanka" , "sudheer" ,6 ,7 ,8,9,10];
+
+    console.log(students) ;
+    console.log(students[4])
+    var newstudents = students.slice ( 1,2 ) ;
+ 
+    console.log(newstudents) ;
+
+    var mobiles =[ "apple" , "oneplus" ,"samsung" , "nokia" , "mi" , "vivo" , "oppo" ] ;
+    var mobiles_slice = mobiles.slice( 5,6) ;
+    console.log(mobiles_slice) ;
+     mobiles.sort()
+    console.log(mobiles)
+
+    var mobilePrice = [ 100 , 5000, 9000, 8800] ;
+    function lowtohight()
+    {
+      
+       console.log( mobilePrice.sort(function (a,b){ a-b} ))
+     } ;
+     lowtohight();
+
+  </script>  
+</body>
+</html>
