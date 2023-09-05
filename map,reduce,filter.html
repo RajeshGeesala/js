@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map,Reduce,Filter</title>
+</head>
+<body>
+
+    <script>
+       let salary = [20000,30000,23000,45000,56000]  ;
+       let DoubleSalary = salary.map( (salare) => {
+                 return (salare * 2)
+       }  )
+
+
+         console.log(salary) ;
+       console.log(DoubleSalary) ;
+
+       let birthYEARS = [ 2000 , 1998 ,2005 ,1999 ,1980] ;
+
+       let FINDAGE =  birthYEARS.map( (ele) => {
+         return    2023 -ele
+       } )  ;
+         console.log(birthYEARS) ;
+
+       console.log(FINDAGE)
+
+       // filter -    : it filters the array ;
+
+       let c = [ 5 ,6,72,25,6,4,56,21,1]
+     console.table(c)
+       let cLessThan5 = c.filter( (x) => {
+             return x <  5
+       } ) ;
+     console.table(cLessThan5)   ;
+
+      // filter objects properties
+
+      var emp = [ {name : "raaj" ,
+                   salary : 28000 ,
+                   age : 24 ,
+                 gender : "male" ,
+                       },
+                       {name : "raaj2" ,
+                   salary : 38000 ,
+                   age : 55 ,
+                 gender : "male" ,
+                       },
+                       {name : "raaj3" ,
+                   salary : 56000 ,
+                   age : 26 ,
+                 gender : "male" ,
+                       },
+
+                    ]
+    var EmpAgeLessThan25 = emp.filter ( (age) => {
+        return age.age < 26
+    }   )
+     console.table(EmpAgeLessThan25)  ;
+
+
+      //  function SumAges (emp)
+      //  {   let sum = 0
+      //   for (let  i = 0 ; i<=emp.length ;i++)
+      //   {
+      //       sum = emp[i].age +sum
+      //   }  return sum
+      //  }  ;
+
+      //  SumAges () ;
+
+      var age = [ 22,44,42,2,22,44,]  ;
+
+        function TotalAge () 
+
+        {
+            let sum = 0 ;
+            for (let i =0 ; i <  age.length ;i++)
+            {
+            sum =  sum + age [i]
+            } ;
+            console.log(sum)
+            return sum
+        }  ;
+      
+          console.log(TotalAge()) 
+
+          // adding all values in object 
+
+          // function TotalAges (emp) {
+          //  let TotalAge = 0 ; 
+          //  for ( let i=0 ; i<emp.length ; i++   )
+          //  {
+          //     TotalAge =  TotalAge + emp[i].age ;
+          //     console.log(TotalAge)
+
+          //      }
+
+          // }
+
+
+             // total numbers using traditional method :
+
+       let num= [ 22,55,55,322,222,22,12]
+
+       TotalTheNumbers = () => {
+         let Total = 0 ;
+         for ( let i=0 ; i< num.length ; i++   )
+         {
+             Total = num[i] + Total ;
+            // console.log(Total)
+         }
+          return Total ;
+       }
+           console.log(TotalTheNumbers())  ;
+
+          // total numbers using reduce method :
+    
+          const TOtal = num.reduce (  ( total , current  )=> {
+            total = total + current ;
+            return total
+          },0   )  ;
+
+          console.log(TOtal)  ;
+
+
+          const TotalEmpAges = emp.reduce (   (acc, current)=>{
+            acc =  acc + current.age
+            return acc ;
+          }  , 0   )
+
+          console.log(TotalEmpAges)  ; 
+            //find maximum using traditional method 
+           FindMAx =()=>
+           {   let max =  0 ;
+            for ( let i=0 ; i< num.length ; i++   )
+            {
+                 if ( num[i] >  max   )
+                 { max = num [i]  }
+
+            }
+              return max
+           } ;  
+
+    
+  console.log(  FindMAx ())  ; 
+
+  // find maximum using reduce method 
+
+    let MaximumNum =   num.reduce (( max , current  )=>{
+      if ( current > max) {
+        max = current
+      }  return max
+
+    } ,0 ) ;
+
+      console.log(MaximumNum)   ;  
+
+
+      // find maximum age in array's object property :
+         
+         let MAxObAge = 0 ;
+        findMAxAge = () =>
+        {
+          for ( let i=0 ; i < emp.length ; i++   )
+          {
+            if ( emp[i].age > MAxObAge )
+            {
+              MAxObAge = emp[i].age 
+            }
+            return MAxObAge ;
+          }
+
+        } ;
+          console.log(findMAxAge())  
+
+
+          const FIndOaM = emp.reduce(  (max , currs) =>{
+             if ( currs.age > max  ) 
+             {  max = currs.age  ;
+               
+             }      
+               else {
+                currs.age = 2
+               } ;
+
+               return max
+             }, 0 )
+ 
+     console.log(FIndOaM)  ;  
+
+     /// plus of all ages in array's object 
+       let TotalAGe = 0 ;
+      function plusAges (){
+        for (i= 0 ; i < emp.length ; i++) 
+        {   TotalAGe = TotalAGe + emp[i].age   }
+        return TotalAGe
+      }  ;
+  /// plus of all ages in array's object using .reduce
+      console.log(plusAges ());
+
+      let PlusAGOb = emp.reduce ( ( total , cur ) =>
+      {
+        total = cur.age + total  
+        return total ;
+      } ,  )
+      console.log(PlusAGOb)
+
+    </script>
+</body>
+</html>
